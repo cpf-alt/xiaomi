@@ -1,0 +1,255 @@
+@charset "UTF-8";
+body ul li {
+  margin: 0;
+  padding: 0;
+  font: 14px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+/*topbar*/
+.topbar {
+  background-color: #333;
+  height: 40px; }
+
+.container {
+  /*块级元素居中*/
+  margin: 0 auto;
+  width: 1226px; }
+
+.container::before .container::after {
+  content: '';
+  display: table; }
+
+.container::after {
+  clear: both; }
+
+.topbar a {
+  color: #b0b0b0;
+  font-size: 10px; }
+
+.topbar a:hover {
+  color: #ffffff; }
+
+.topbar-nav {
+  float: left;
+  line-height: 40px;
+  height: 40px;
+  font-size: 0; }
+
+.topbar-nav span {
+  font-size: 12px;
+  color: #424242;
+  font-family: sans-serif;
+  margin: 0.5rem; }
+
+.topbar-info, .topbar-cart {
+  float: right; }
+
+.topbar-cart a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 120px;
+  background-color: #424242; }
+
+.topbar-cart a:hover {
+  background-color: #ffffff;
+  color: #ff6700; }
+
+.topbar-cart span {
+  margin-left: -4px;
+  font-size: 12px; }
+
+/*购物车字体图标设置*/
+.topbar-cart i {
+  font-size: 20px;
+  margin-right: 4px;
+  /*设置元素的垂直对齐方式, 顶端对齐*/
+  vertical-align: top; }
+
+.topbar-info {
+  margin-right: 15px; }
+
+.topbar-info a {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 5px; }
+
+.topbar-info span {
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  color: #424242;
+  font-family: sans-serif;
+  margin: 0.5rem; }
+
+.topbar-info .sep {
+  padding: 0 10px; }
+
+/*header*/
+.header {
+  height: 100px; }
+
+.header-logo {
+  float: left;
+  width: 62px;
+  margin-top: 25px;
+  height: 55px;
+  /*border: 1px solid black;*/ }
+
+.header-logo a {
+  display: block;
+  height: 55px;
+  width: 55px;
+  /*背景颜色为小米黄, 图片填充，不重复，居中显示*/
+  background: #ff6700 url(../img/favicon.ico) no-repeat center; }
+
+/*网络不好的情况下，logo不能正常显示，则显示lr里面的文字*/
+.header-logo .lr {
+  text-align: left;
+  /*文本缩进*/
+  text-indent: -288888em; }
+
+.header-nav {
+  float: left;
+  width: 850px;
+  height: 100px;
+  /*border: 1px solid black;*/ }
+
+.header-nav .nav-list {
+  width: 820px;
+  height: 88px;
+  font-size: 16px; }
+
+.header-nav .nav-list .nav-item {
+  float: left; }
+
+.header-nav .nav-list .nav-item a {
+  color: #333;
+  display: block;
+  padding: 26px 10px 38px; }
+
+.header-nav .nav-list .nav-item a:hover {
+  color: #ff6700; }
+
+.header-nav .nav-list .nav-all a:hover {
+  color: #333; }
+
+.header-search {
+  /*定位*/
+  position: relative;
+  float: right;
+  width: 296px;
+  height: 55px;
+  margin-top: 25px;
+  /*border: 1px solid black;*/ }
+
+.header-search .search-form {
+  display: block;
+  height: 296px;
+  width: 50px; }
+
+.header-search .search-form .search-text {
+  /*定位*/
+  position: absolute;
+  top: 0;
+  right: 51px;
+  display: block;
+  width: 245px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #e0e0e0;
+  outline: 0; }
+
+.header-search .search-form .search-btn {
+  /*定位*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  /*块显示*/
+  display: block;
+  /*设置宽高和边框*/
+  width: 52px;
+  height: 50px;
+  border: 1px solid #e0e0e0;
+  /*字体大小和上下居中*/
+  font-size: 24px;
+  line-height: 24px;
+  /*背景颜色、字体颜色*/
+  background: #fff;
+  color: #616161;
+  /*轮廓线不显示*/
+  outline: 0; }
+
+.header-search .search-form .search-btn:hover {
+  background-color: #ff6700;
+  color: #fff; }
+
+i {
+  width: 20px; }
+
+.icon-gouwuchekong {
+  width: 20px;
+  font-size: 12px; }
+
+.icon-sousuo {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 10px; }
+
+.icon-xiaomi {
+  font-size: 50px;
+  text-align: center;
+  color: white; }
+
+/*基于阿里巴巴矢量图标库的图像字体*/
+/* 下拉菜单 */
+.sou {
+  position: relative; }
+
+.bigbox {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  border-top: 1px solid #ccc;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+  display: none;
+  opacity: .3;
+  background-color: #FFFFFF;
+  z-index: 100; }
+
+.bigbox .w {
+  height: 250px; }
+
+.bigbox li {
+  float: left;
+  width: 200px;
+  height: 250px;
+  padding: 20px 0;
+  text-align: center;
+  margin: 0; }
+
+.img {
+  width: 200px;
+  height: 150px;
+  border-right: 1px solid #E0E0E0; }
+
+.img img {
+  width: 197px; }
+
+.last {
+  border: 0; }
+
+.text {
+  font-size: 14px; }
+
+.jiage {
+  font-size: 13px;
+  color: #FF4500;
+  margin-top: 10px; }

@@ -1,0 +1,1 @@
+$(".subnav li").on({mouseover:function(){console.log("1")}});
