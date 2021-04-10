@@ -1,7 +1,10 @@
-body ul li{
+*{
     margin: 0;
     padding: 0;
-    font: 14px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif
+}
+body ul li img{
+    margin: 0;
+    padding: 0;
 }
 
 ul {
@@ -125,15 +128,14 @@ a {
     width: 62px;
     margin-top: 25px;
     height: 55px;
+    border-radius: 25px;
     /*border: 1px solid black;*/
 }
 
 .header-logo a {
     display: block;
     height: 55px;
-    width: 55px;
     /*背景颜色为小米黄, 图片填充，不重复，居中显示*/
-    background: #ff6700 url(../img/favicon.ico) no-repeat center;
 }
 
 /*网络不好的情况下，logo不能正常显示，则显示lr里面的文字*/
@@ -180,7 +182,6 @@ a {
     /*定位*/
     position: relative;
     float: right;
-    width: 296px;
     height: 55px;
     margin-top: 25px;
     /*border: 1px solid black;*/
@@ -188,7 +189,6 @@ a {
 
 .header-search .search-form {
     display: block;
-    height: 296px;
     width: 50px;
 }
 
@@ -244,12 +244,11 @@ i{
    margin-top: 10px;
 }
 .icon-xiaomi{
+    line-height: 55px;
     font-size: 50px;
     text-align: center;
     color: white;
 }
-/*基于阿里巴巴矢量图标库的图像字体*/
-/* 下拉菜单 */
 .sou {
 	position: relative;
 }
@@ -302,11 +301,57 @@ i{
 	color: #FF4500;
 	margin-top: 10px;
 }
-
-
-
-
-
-
+.lunbo{
+    width: 1226px;
+    height: 460px;
+    margin: 0 auto;
+    position: relative;
+    .lun{
+        height: 460px;
+    }
+    li{
+        list-style: none;
+        position: absolute;
+        display: none;
+        img{
+            width: 100%;
+        }
+    }
+    .nav1{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        p {
+            width: 10px;
+            height: 10px;
+            border: 2px solid #666;
+            border-radius: 20px;
+            float: left;
+            margin-left: 5px;
+            background-color: #999;
+        }
+        .select{
+            background: #ddd;
+        }
+    }
+}
+.lunbo aside{
+    width: 234px;
+    height: 460px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    ul{
+        width: 100%;
+        height: 100%;
+        li{
+            width: 234px;
+            height: 42px;
+            display: block;
+            position: relative;
+            line-height: 42px;
+        }
+    }
+}
 
 

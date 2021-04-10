@@ -37,5 +37,9 @@ gulp.task("font", done => {
     gulp.src("font/*").pipe(gulp.dest("dist/font")).pipe(connect.reload());
     done();
 })
-gulp.task("bulid", gulp.parallel("html", "sass", "js", "font"));
+gulp.task("img", done => {
+    gulp.src("img/*").pipe(gulp.dest("dist/images")).pipe(connect.reload());
+    done();
+})
+gulp.task("bulid", gulp.parallel("html", "sass", "js", "font", "img"));
 gulp.task("default", gulp.series("bulid", "server", "watch"));

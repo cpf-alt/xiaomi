@@ -13,18 +13,123 @@
       "unicode_decimal": 983417
     },
     {
-      "icon_id": "840782",
-      "name": "小米",
-      "font_class": "xiaomi",
-      "unicode": "e661",
-      "unicode_decimal": 58977
+      "icon_id": "82756",
+      "name": "回到顶部",
+      "font_class": "huidaodingbu",
+      "unicode": "f012c",
+      "unicode_decimal": 983340
     },
     {
-      "icon_id": "1546590",
+      "icon_id": "338376",
+      "name": "充值",
+      "font_class": "chongzhi",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "840781",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "1517504",
       "name": "搜索",
       "font_class": "sousuo",
-      "unicode": "e696",
-      "unicode_decimal": 59030
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "6003698",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "6556877",
+      "name": "微博",
+      "font_class": "weibo",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "7466469",
+      "name": "电话卡，手机号，手机卡",
+      "font_class": "huabanfuben",
+      "unicode": "e689",
+      "unicode_decimal": 59017
+    },
+    {
+      "icon_id": "7550266",
+      "name": "客服",
+      "font_class": "kefu",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "9402974",
+      "name": "个人",
+      "font_class": "changyongicon-",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "9929778",
+      "name": "货币转换",
+      "font_class": "huobizhuanhuan",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "13614089",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "14966524",
+      "name": "7天退换货",
+      "font_class": "7tiantuihuanhuo",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "15061462",
+      "name": "地点",
+      "font_class": "location",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "16372275",
+      "name": "礼物",
+      "font_class": "liwu",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "16606310",
+      "name": "15",
+      "font_class": "15",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "17895794",
+      "name": "秒杀",
+      "font_class": "miaosha",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "18005290",
+      "name": "楼宇",
+      "font_class": "UIsheji_menjinxitong-20",
+      "unicode": "e623",
+      "unicode_decimal": 58915
     }
   ]
 }

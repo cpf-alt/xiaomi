@@ -5,115 +5,955 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
-    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.js"></script>
-    <script src="http://cdn.bootcss.com/bootstrap-hover-dropdown/2.0.10/bootstrap-hover-dropdown.min.js"></script>
+    <title>首页</title>
+    <link rel="stylesheet" href="font/iconfont.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/index.js"></script>
+    <style>
+        /*   html,
+        body {
+            height: 100%;
+        } */
+    </style>
 </head>
 
 <body>
     <div class="header">
-        <div class="top">
-            <div class="container1">
-                <div class="left" style="float: left;">
-                    <a href="//www.mi.com/index.html">小米商城</a>
-                    <span>|</span>
-                    <a href="//www.mi.com/index.html">MIUI</a>
-                    <span>|</span>
-                    <a href="//www.mi.com/index.html">loT</a>
-                    <span>|</span>
-                    <a href="//www.mi.com/index.html">云服务</a>
-                    <span>|</span>
-                    <a href="//www.mi.com/index.html">天星数科</a>
-                    <span>|</span>
-                    <a href="//www.mi.com/index.html">有品</a>
-                    <span>|</span>
-                    <a href="//www.mi.com/index.html">小爱开放平台</a>
-                    <span>|</span>
-                    <a href="//www.mi.com/index.html">企业团购</a>
-                    <span>|</span>
-                    <a href="//www.mi.com/index.html">资质证照</a>
-                    <span>|</span>
-                    <a href="//www.mi.com/index.html">协议规则</a>
-                    <span>|</span>
-
-                    <a data-toggle="dropdown" data-hover="dropdown" href="//www.mi.com/index.html">下载APP
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            <li role="presentation">
-                                <a role="menuitem" tabindex="-1" href="#" style="width: 30px;">1</a>
-                            </li>
-                        </ul>
-                    </a>
-
-                    <span>|</span>
-                    <a href="//www.mi.com/index.html">智能生活</a>
-                    <span>|</span>
-                    <a href="//www.mi.com/index.html">Select Location</a>
+        <div class="top-wrap">
+            <div class="top">
+                <div class="top-nav">
+                    <a href="#">小米商城</a>
+                    <span class="sep">|</span>
+                    <a href="#">MIUI</a>
+                    <span class="sep">|</span>
+                    <a href="#">IoT</a>
+                    <span class="sep">|</span>
+                    <a href="#">云服务</a>
+                    <span class="sep">|</span>
+                    <a href="#">天星科技</a>
+                    <span class="sep">|</span>
+                    <a href="#">有品</a>
+                    <span class="sep">|</span>
+                    <a href="#">小米开放平台</a>
+                    <span class="sep">|</span>
+                    <a href="#">企业团购</a>
+                    <span class="sep">|</span>
+                    <a href="#">资质证照</a>
+                    <span class="sep">|</span>
+                    <a href="#">协议规则</a>
+                    <span class="sep">|</span>
+                    <a href="#">下载app</a>
+                    <span class="sep">|</span>
+                    <a href="#">智能生活</a>
+                    <span class="sep">|</span>
+                    <a href="#">SelectLocation</a>
+                    <span class="sep">|</span>
                 </div>
-                <div class="right">
-                    <em></em>
+                <div class="top-bar">
+                    <em class="iconfont icon-gouwuchekong"></em>
                     <em>购物车</em>
                     <span>(0)</span>
                 </div>
-                <div class="zhong">
-                    <a href="//www.mi.com/index.html">登录</a>
+                <div class="top-info">
+                    <a href="#">登录</a>
                     <span>|</span>
-                    <a href="//www.mi.com/index.html">注册</a>
+                    <a href="#">注册</a>
                     <span>|</span>
-                    <a href="//www.mi.com/index.html">消息通知</a>
+                    <a href="#">消息通知</a>
                 </div>
             </div>
         </div>
-        <div class="head">
-            <nav style="height: 100px;">
-                <div class="container" style="width: 1226px; height: 100px; background-color: chocolate;padding: 0;">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header" style="height: 100px;">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">Brand</a>
-                    </div>
+        <div class="site-header-wrap">
+            <div class="site-header">
+                <div class="header-logo">
+                    <a href="#"><img src="images/logo.png" alt="" width="56px"></a>
+                </div>
+                <div class="header-nav">
+                    <ul class="one">
+                        <li><a href="#">小米手机</a></li>
+                        <li><a href="#">Redmi红米</a></li>
+                        <li><a href="#">电视</a></li>
+                        <li><a href="#">笔记本</a></li>
+                        <li><a href="#">家电</a></li>
+                        <li><a href="#">路由器</a></li>
+                        <li><a href="#">智能软件</a></li>
+                        <li><a href="#">服务</a></li>
+                        <li><a href="#">社区</a></li>
+                    </ul>
+                </div>
+                <div class="header-search">
+                    <input type="search" value="电视机">
+                    <div class="iconfont icon-sousuo button"> </div>
+                </div>
+            </div>
+            <div class="xiala" style="display: none;">
+                <div class="xia">
+                    <ul>
+                        <li>
+                            <div><img src="images/QQ图片20210410153055.png" alt=""></div>
+                            <p>小米手机</p>
+                            <p>9999起</p>
+                        </li>
+                        <li>
+                            <div><img src="images/QQ图片20210410153055.png" alt=""></div>
+                            <p>小米手机</p>
+                            <p>9999起</p>
+                        </li>
+                        <li>
+                            <div><img src="images/QQ图片20210410153055.png" alt=""></div>
+                            <p>小米手机</p>
+                            <p>9999起</p>
+                        </li>
+                        <li>
+                            <div><img src="images/QQ图片20210410153055.png" alt=""></div>
+                            <p>小米手机</p>
+                            <p>9999起</p>
+                        </li>
+                        <li>
+                            <div><img src="images/QQ图片20210410153055.png" alt=""></div>
+                            <p>小米手机</p>
+                            <p>9999起</p>
+                        </li>
+                        <li>
+                            <div><img src="images/QQ图片20210410153055.png" alt=""></div>
+                            <p>小米手机</p>
+                            <p>9999起</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"
-                        style="height: 100px;padding: 0;">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                            <li><a href="#">Link</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                    aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">One more separated link</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right" style="width: 296px; margin-top: 25px;">
-                            <form class="navbar-form navbar-left">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                </div>
-                                <button type="submit" class="btn btn-default">Submit</button>
-                            </form>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
-            </nav>
+    </div>
+    <div class="swiper-container" style="padding-bottom: 14px;">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(images/swiper.jpg);background-size:contain"></div>
+            <div class="swiper-slide" style="background-image:url(images/swiper1.jpg);background-size:contain"></div>
+            <div class="swiper-slide" style="background-image:url(images/swiper2.jpg);background-size:contain"></div>
+            <div class="swiper-slide" style="background-image:url(images/swiper3.jpg);background-size:contain"></div>
+            <div class="swiper-slide" style="background-image:url(images/swiper4.jpg);background-size:contain"></div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-white"
+            style="width: 400px ;left:930px;bottom: 20px; position: absolute;"></div>
+        <!-- 轮播箭头 -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white" style="left: 236px;"></div>
+        <!-- 轮播上的导航 -->
+        <div class="site-category">
+            <ul class="site-category-list">
+                <li class="category-item">
+                    <a href="#">手机 电话卡</a>
+                    <em class="iconfont-arrow-right">></em>
+                </li>
+                <li class="category-item">
+                    <a href="#">电视 盒子</a>
+                    <em class="iconfont-arrow-right">></em>
+                </li>
+                <li class="category-item">
+                    <a href="#">笔记本 显示器</a>
+                    <em class="iconfont-arrow-right">></em>
+                </li>
+                <li class="category-item">
+                    <a href="#">家电 插线板</a>
+                    <em class="iconfont-arrow-right">></em>
+                </li>
+                <li class="category-item">
+                    <a href="#">出行 穿戴</a>
+                    <em class="iconfont-arrow-right">></em>
+                </li>
+                <li class="category-item">
+                    <a href="#">智能 路由器</a>
+                    <em class="iconfont-arrow-right">></em>
+                </li>
+                <li class="category-item">
+                    <a href="#">电源 配件</a>
+                    <em class="iconfont-arrow-right">></em>
+                </li>
+                <li class="category-item">
+                    <a href="#">健康 儿童</a>
+                    <em class="iconfont-arrow-right">></em>
+                </li>
+                <li class="category-item">
+                    <a href="#">耳机 音响</a>
+                    <em class="iconfont-arrow-right">></em>
+                </li>
+                <li class="category-item">
+                    <a href="#">生活 箱包</a>
+                    <em class="iconfont-arrow-right">></em>
+                </li>
+            </ul>
+        </div>
+        <div class="menu" style="box-shadow: 0 3px  5px #999;">
+            <div class="menu1">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                </ul>
+                <ul>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                </ul>
+                <ul>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="menu2">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                </ul>
+                <ul>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                </ul>
+                <ul>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="menu3">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                </ul>
+                <ul>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="menu4">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                </ul>
+                <ul>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                </ul>
+                <ul>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="menu5">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                </ul>
+                <ul>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="menu6">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                </ul>
+                <ul>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                    <li> <a href="#">
+                            <img src="images/a.png" alt="">
+                            <span>小米手机</span>
+                        </a></li>
+                </ul>
+            </div>
         </div>
     </div>
+    <!-- </div> -->
+    <!-- 轮播下面 -->
+    <div class="home-hero-sub" style="padding-bottom: 14px;">
+        <div class="home-hero-sub-left">
+            <ul>
+                <li>
+                    <em></em>
+                    <div><img src="images/秒杀.png" alt=""><span>小米秒杀</span></div>
+                </li>
+                <li>
+                    <em></em>
+                    <div><img src="images/秒杀.png" alt=""><span>企业团购</span></div>
+                </li>
+                <li>
+                    <em></em>
+                    <div><img src="images/秒杀.png" alt=""><span>F码通道</span></div>
+                </li>
+                <li>
+                    <em></em>
+                    <div><img src="images/秒杀.png" alt=""><span>米粉卡</span></div>
+                </li>
+                <li>
+                    <em></em>
+                    <div><img src="images/秒杀.png" alt=""><span>以旧换新</span></div>
+                </li>
+                <li>
+                    <em></em>
+                    <div><img src="images/秒杀.png" alt=""><span>话费充值</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="home-right">
+            <li><a href=""><img src="images/5d4298059889417157e8492750328492.jpg" alt=""></a></li>
+            <li><a href=""><img src="images/793913688bfaee26b755a0b0cc8575fd.jpg" alt=""></a></li>
+            <li><a href=""><img src="images/b30177d629bfbe2fb42251c1b8538f7b.jpg" alt=""></a></li>
+        </div>
+    </div>
+    <div class="home-main">
+        <div class="miaosha">
+            <p>小米秒杀</p>
+            <div class="box-bd">
+                <div class="flashs"></div>
+                <div class="sale"></div>
+            </div>
+        </div>
+        <div class="banner">
+            <a href="#">
+                <img src="images/note9.png" alt="">
+            </a>
+        </div>
+        <div class="brick">
+            <div class="box-hd">
+                <h2>手机</h2>
+                <div class="more">
+                    <a href="#">查看全部<div style="float: right;">&gt;</div></a>
+                </div>
+            </div>
+            <div class="claerfix">
+                <div class="span4">
+                    <ul class="claerfix yinying">
+                        <li> <a href=""><img style="width: 234px;height: 614px;"
+                                    src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c583f2edc613f1be20fa415910b13ce3.jpg?thumb=1&w=293&h=768&f=webp&q=90"
+                                    alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="span6">
+                    <ul>
+                        <li class="yinying"><a href="#">
+                                <div class="pic"> <img
+                                        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5dc32ec73299ff79556dcd1cf0f0ac11.png?thumb=1&w=250&h=250&f=webp&q=90"
+                                        alt=""> </div>
+                                <h3>小米11 Ultra</h3>
+                                <p>折叠大屏|自研芯片</p>
+                                <p style="color: coral;">9999元起</p>
+                            </a></li>
+                        <li class="yinying"><a href="#">
+                                <div class="pic"> <img
+                                        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5dc32ec73299ff79556dcd1cf0f0ac11.png?thumb=1&w=250&h=250&f=webp&q=90"
+                                        alt=""> </div>
+                                <h3>小米11 Ultra</h3>
+                                <p>折叠大屏|自研芯片</p>
+                                <p style="color: coral;">9999元起</p>
+                            </a></li>
+                        <li class="yinying"><a href="#">
+                                <div class="pic"> <img
+                                        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5dc32ec73299ff79556dcd1cf0f0ac11.png?thumb=1&w=250&h=250&f=webp&q=90"
+                                        alt=""> </div>
+                                <h3>小米11 Ultra</h3>
+                                <p>折叠大屏|自研芯片</p>
+                                <p style="color: coral;">9999元起</p>
+                            </a></li>
+                        <li class="yinying"><a href="#">
+                                <div class="pic"> <img
+                                        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5dc32ec73299ff79556dcd1cf0f0ac11.png?thumb=1&w=250&h=250&f=webp&q=90"
+                                        alt=""> </div>
+                                <h3>小米11 Ultra</h3>
+                                <p>折叠大屏|自研芯片</p>
+                                <p style="color: coral;">9999元起</p>
+                            </a></li>
+                        <li class="yinying"><a href="#">
+                                <div class="pic"> <img
+                                        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5dc32ec73299ff79556dcd1cf0f0ac11.png?thumb=1&w=250&h=250&f=webp&q=90"
+                                        alt=""> </div>
+                                <h3>小米11 Ultra</h3>
+                                <p>折叠大屏|自研芯片</p>
+                                <p style="color: coral;">9999元起</p>
+                            </a></li>
+                        <li class="yinying"><a href="#">
+                                <div class="pic"> <img
+                                        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5dc32ec73299ff79556dcd1cf0f0ac11.png?thumb=1&w=250&h=250&f=webp&q=90"
+                                        alt=""> </div>
+                                <h3>小米11 Ultra</h3>
+                                <p>折叠大屏|自研芯片</p>
+                                <p style="color: coral;">9999元起</p>
+                            </a></li>
+                        <li class="yinying"><a href="#">
+                                <div class="pic"> <img
+                                        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5dc32ec73299ff79556dcd1cf0f0ac11.png?thumb=1&w=250&h=250&f=webp&q=90"
+                                        alt=""> </div>
+                                <h3>小米11 Ultra</h3>
+                                <p>折叠大屏|自研芯片</p>
+                                <p style="color: coral;">9999元起</p>
+                            </a></li>
+                        <li class="yinying"><a href="#">
+                                <div class="pic"> <img
+                                        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5dc32ec73299ff79556dcd1cf0f0ac11.png?thumb=1&w=250&h=250&f=webp&q=90"
+                                        alt=""> </div>
+                                <h3>小米11 Ultra</h3>
+                                <p>折叠大屏|自研芯片</p>
+                                <p style="color: coral;">9999元起</p>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <a href="#">
+                <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/41d16e66381cfeda7b6b39ab67678d5e.jpg?thumb=1&w=1533&h=150&f=webp&q=90"
+                    alt="">
+            </a>
+        </div>
+    </div>
+    <div class="footer"></div>
+    <!-- 轮播js -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            effect: 'fade',
+            autoplay: true,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                autoplay: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        $(".one").hover(function () {
+            console.log("1")
+            $(".xiala").slideToggle()
+        })
+    </script>
 </body>
+</body>
+
 
 </html>

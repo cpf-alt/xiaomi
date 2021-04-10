@@ -1,1 +1,1 @@
-$(".subnav li").on({mouseover:function(){console.log("1")}});
+var swiper=new Swiper(".swiper-container",{spaceBetween:30,effect:"fade",pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});
