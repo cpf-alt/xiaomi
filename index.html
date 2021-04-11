@@ -45,7 +45,8 @@
                     <span class="sep">|</span>
                     <a href="#">协议规则</a>
                     <span class="sep">|</span>
-                    <a href="#">下载app</a>
+                    <a href="#" style="position: relative;">下载app
+                    </a>
                     <span class="sep">|</span>
                     <a href="#">智能生活</a>
                     <span class="sep">|</span>
@@ -58,10 +59,24 @@
                     <span>(0)</span>
                 </div>
                 <div class="top-info">
-                    <a href="#">登录</a>
+                    <a href="login.html">登录</a>
                     <span>|</span>
-                    <a href="#">注册</a>
+                    <a href="regison.html">注册</a>
                     <span>|</span>
+                    <div class="denglu" id="denglu">
+                        <a href="#" id="sp" style="display: inline-block;">登录</a>
+                        <span>|</span>
+                        <a href="#">消息通知</a>
+                        <span>|</span>
+                        <a href="#">我的订单</a>
+                        <ul style="background: #fff;" class="pingjia">
+                            <li>个人评价</li>
+                            <li>评价晒单</li>
+                            <li>我的喜欢</li>
+                            <li>小米账户</li>
+                            <li id="tuichu">退出登录</li>
+                        </ul>
+                    </div>
                     <a href="#">消息通知</a>
                 </div>
             </div>
@@ -931,7 +946,26 @@
     </div>
     <div class="footer"></div>
     <!-- 轮播js -->
+    <script src="js/cookie.js"></script>
+    <script src="js/index.js"></script>
     <script>
+        var oIn = document.querySelector("#sp");
+        var tU = document.querySelector("#tuichu")
+        var denglu = document.querySelector("#denglu")
+        if (getCookie("username")) {
+            oIn.innerHTML = getCookie("username");
+            denglu.style.display = "block"
+        } else {
+            denglu.style.display = "none"
+        }
+        console.log(tU)
+        tU.onclick = function () {
+            setCookie("username", "", -1);
+            location.href = "http://127.0.0.1:8080/"
+        }
+        $("#sp").mouseover(function () {
+            $("#sp").css("background-color", "#fff")
+        })
         var swiper = new Swiper('.swiper-container', {
             spaceBetween: 30,
             effect: 'fade',
@@ -947,9 +981,16 @@
                 prevEl: '.swiper-button-prev',
             },
         });
+        $("#sp").hover(function () {
+            $(".pingjia").slideDown()
+        })
+        $(".pingjia").mouseleave(function () {
+            $(".pingjia").slideUp()
+            $("#sp").css("background-color", "#333")
+        })
         $(".one").hover(function () {
             console.log("1")
-            $(".xiala").slideToggle()
+            $(".xiala").slideToggle("fast")
         })
     </script>
 </body>

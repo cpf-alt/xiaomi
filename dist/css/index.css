@@ -24,7 +24,7 @@ i, em {
 
 body {
   font-family: "微软雅黑";
-  /* font-size:12px; */ }
+  font-size: 12px; }
 
 input, a {
   outline: none; }
@@ -73,6 +73,7 @@ input, a {
     .top-wrap .top .top-info {
       height: 40px;
       line-height: 40px;
+      position: relative;
       float: right; }
       .top-wrap .top .top-info a {
         color: #b0b0b0;
@@ -81,6 +82,43 @@ input, a {
           color: #fff; }
       .top-wrap .top .top-info span {
         color: #424242; }
+      .top-wrap .top .top-info .denglu {
+        display: none;
+        width: 265px;
+        height: 40px;
+        position: absolute;
+        left: -127px;
+        top: 0;
+        background: #333;
+        z-index: 50; }
+        .top-wrap .top .top-info .denglu #sp {
+          width: 97px;
+          text-align: center;
+          transition: all .3s; }
+          .top-wrap .top .top-info .denglu #sp:hover {
+            color: #ff6700; }
+        .top-wrap .top .top-info .denglu span {
+          margin: 0 7px; }
+        .top-wrap .top .top-info .denglu ul {
+          z-index: 100;
+          width: 97px;
+          height: 154px;
+          padding: 7px 0;
+          box-shadow: 0 0 5px #665e57;
+          display: none; }
+          .top-wrap .top .top-info .denglu ul li {
+            cursor: pointer;
+            transition: all .3s;
+            width: 97px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-weight: normal;
+            color: #424242;
+            font-size: 12px; }
+            .top-wrap .top .top-info .denglu ul li:hover {
+              background: #f5f5f5;
+              color: #ff6700; }
 
 .site-header-wrap {
   width: 100%; }

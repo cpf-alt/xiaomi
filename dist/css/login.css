@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.header {
+  display: block;
+  width: 1130px;
+  height: 98px;
+  margin: 0 auto;
+  text-align: center; }
+  .header a {
+    display: block;
+    width: 200px;
+    height: 98px;
+    background: url(https://s1.mi.com/m/images/202104011112/202104011110.png); }
+
+.middle {
+  position: relative;
+  height: 588px;
+  background-image: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/393b0c08418144ad6e68d1ca36e6b32e.jpg);
+  background-repeat: no-repeat;
+  background-position: -634px 0; }
+
+.user {
+  position: absolute;
+  top: 35px;
+  right: 190px;
+  width: 410px;
+  height: 556px;
+  background-color: white; }
+
+.user_header {
+  height: 82px;
+  text-align: center;
+  line-height: 82px; }
+
+.user_header a {
+  padding: 27px 0 24px;
+  text-align: center;
+  font-size: 24px;
+  color: #666; }
+
+.user_header a:hover {
+  color: #FF6700; }
+
+.line {
+  width: 1px;
+  height: 24px;
+  margin: 0 35px 0 42px;
+  border: 1px solid #e0e0e0;
+  background: #e0e0e0; }
+
+.user_middle input {
+  color: #686868;
+  width: 306px;
+  height: 25px;
+  border: 1px solid #e0e0e0;
+  padding: 13px 16px 13px 14px;
+  margin: 0 0 5px 35px; }
+
+.user_middle > a {
+  display: block;
+  width: 308px;
+  height: 25px;
+  background-color: #FF6700;
+  padding: 13px 16px 13px 14px;
+  margin: 0 0 15px 35px;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  line-height: 25px; }
+
+.user_middle li {
+  width: 308px;
+  padding-bottom: 35px;
+  margin: 0 0 0 45px;
+  font-size: 14px;
+  text-align: center; }
+
+.user_middle li a {
+  color: #757575; }
+
+.user_middle li a:hover {
+  color: #FF6700; }
+
+.user_footer img {
+  margin: 80px 0 0 80px; }
+
+.footer {
+  width: 100%;
+  background: #fff;
+  margin-top: 0;
+  padding-top: 100px;
+  height: 80px;
+  text-align: center; }
+  .footer ul {
+    height: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center; }
+  .footer p {
+    font-size: 14px;
+    text-align: center;
+    color: #757575;
+    padding: 10px; }
+    .footer p a {
+      cursor: pointer;
+      color: #757575; }
+
+.footer li a,
+.footer li span {
+  color: #757575;
+  font-size: 14px; }
+
+.footer li a {
+  display: inline-block;
+  height: 19px;
+  padding: 0 10px;
+  text-align: center; }
+
+.footer li a:hover {
+  color: #FF6700; }
+
+.user_middle span {
+  display: block;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px; }

@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+body {
+  background-color: #F9F9F9; }
+
+.top {
+  width: 786px;
+  height: 520px;
+  background-color: white;
+  margin: 0 auto;
+  padding: 0 34px 30px 34px; }
+
+.title {
+  display: block;
+  width: 55px;
+  height: 55px;
+  background: url(https://account.xiaomi.com/static/res/8df71d6/account-static/respassport/acc-2014/img/milogo.png) no-repeat;
+  margin: 0 auto;
+  margin-bottom: 40px; }
+
+.top h4 {
+  display: block;
+  color: #333;
+  width: 786px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 30px;
+  font-weight: normal;
+  text-align: center; }
+
+.middle {
+  margin: 0 0 0 130px;
+  color: #757575; }
+
+.middle input {
+  border: 1px solid #757575;
+  margin-bottom: 4px; }
+
+.p {
+  color: red;
+  margin-left: 20px;
+  display: inline-block; }
+
+.c {
+  color: red;
+  margin-left: 4px;
+  display: inline-block; }
+
+.l {
+  font-size: 18px; }
+
+.d {
+  display: inline; }
+
+.i {
+  height: 30px;
+  width: 300px; }
+
+.footer {
+  display: block;
+  height: 30px;
+  margin: 100px 0 0 600px; }
+
+.footer li {
+  float: left; }
+
+.footer li a,
+.footer li span {
+  color: #757575;
+  font-size: 14px; }
+
+.footer li a {
+  display: inline-block;
+  height: 19px;
+  padding: 0 10px;
+  text-align: center; }
+
+.footer li a:hover {
+  color: #FF6700; }
+
+#op {
+  margin-left: 95px; }

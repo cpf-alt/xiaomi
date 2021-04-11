@@ -1,9 +1,9 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
-const babel = require("gulp-babel");
+// const babel = require("gulp-babel");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
-const rename = require("gulp-rename");
+// const rename = require("gulp-rename");
 const connect = require("gulp-connect");
 gulp.task("html", done => {
     gulp.src("*.html")
