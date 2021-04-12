@@ -367,6 +367,26 @@ input, a {
   width: 1226px;
   height: 686px;
   margin: 0 auto; }
+  .brick .vs {
+    width: 100%; }
+    .brick .vs ul {
+      display: flex;
+      justify-content: space-between; }
+      .brick .vs ul li img {
+        width: 296px;
+        height: 180px;
+        margin: 0 0 28px; }
+      .brick .vs ul li h3 {
+        margin: 0 14px 6px;
+        font-size: 14px;
+        text-align: center;
+        color: #333; }
+      .brick .vs ul li p {
+        height: 18px;
+        text-align: center;
+        margin: 0 14px;
+        margin-bottom: 28px;
+        color: #b0b0b0; }
 
 .box-hd {
   position: relative;
@@ -377,8 +397,26 @@ input, a {
     font-weight: 200;
     line-height: 58px;
     color: #333; }
+  .box-hd .less {
+    position: absolute;
+    width: 156px;
+    height: 42px;
+    top: 0;
+    right: 0; }
+    .box-hd .less li {
+      transition: all .3s;
+      float: left;
+      margin-left: 30px;
+      text-align: center;
+      line-height: 42px;
+      border-bottom: 3px solid #f5f5f5; }
+      .box-hd .less li:hover {
+        color: #ff6700;
+        border-bottom: 3px solid #ff6700; }
   .box-hd .more {
     position: absolute;
+    height: 58px;
+    line-height: 58px;
     top: 0;
     right: 0; }
     .box-hd .more a {
@@ -391,6 +429,7 @@ input, a {
     .box-hd .more div {
       transition: all .4s;
       margin-left: 8px;
+      margin-top: 19px;
       width: 20px;
       height: 20px;
       background-color: #999;
@@ -454,6 +493,100 @@ input, a {
         width: 160px;
         height: 160px;
         margin: 0 auto; }
+  .span6 .chen {
+    display: none; }
+
+.footer {
+  width: 100%;
+  min-height: 100px;
+  background-color: #fff; }
+  .footer .one {
+    width: 1226px;
+    padding: 27px 0;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 0 auto; }
+    .footer .one ul {
+      width: 100%;
+      height: 25px;
+      display: flex;
+      justify-content: space-between; }
+      .footer .one ul li {
+        width: 243px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        font-size: 16px;
+        transition: all .3s;
+        border-left: 1px solid #e0e0e0; }
+        .footer .one ul li em {
+          font-size: 24px;
+          margin-right: 6px; }
+        .footer .one ul li a {
+          color: #616161; }
+          .footer .one ul li a:hover {
+            color: #ff6700; }
+  .footer .two {
+    position: relative;
+    width: 1226px;
+    margin: 0 auto;
+    padding: 40px 0; }
+    .footer .two .serve {
+      width: 251px;
+      float: left;
+      border-left: 1px solid #e0e0e0;
+      text-align: center;
+      color: #616161; }
+      .footer .two .serve a {
+        width: 118px;
+        height: 28px;
+        line-height: 28px;
+        display: inline-block;
+        border: 1px solid #b0b0b0;
+        text-align: center;
+        cursor: pointer;
+        border-color: #ff6700;
+        background: #fff;
+        font-size: 12px;
+        line-height: 28px;
+        color: #ff6700;
+        transition: all .5s; }
+        .footer .two .serve a:hover {
+          background: #ff6700;
+          color: #fff; }
+      .footer .two .serve .follow {
+        font-size: 12px;
+        margin-top: 10px;
+        position: relative;
+        color: #616161; }
+        .footer .two .serve .follow a {
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          border: none;
+          margin-top: -3px;
+          margin-left: 6px;
+          vertical-align: middle;
+          color: #757575;
+          transition: all .5s; }
+          .footer .two .serve .follow a i {
+            font-size: 24px; }
+          .footer .two .serve .follow a:hover {
+            color: #ff6700;
+            background-color: #fff; }
+    .footer .two dl {
+      width: 160px;
+      float: left; }
+      .footer .two dl dt {
+        margin: -1px 0 26px;
+        font-size: 14px;
+        line-height: 1.25;
+        color: #424242; }
+      .footer .two dl dd {
+        margin: 10px 0 0;
+        font-size: 12px;
+        color: #757575; }
+        .footer .two dl dd:hover {
+          color: #ff6700; }
 
 .yinying {
   transition: all .5s; }
@@ -462,3 +595,74 @@ input, a {
 
 .a {
   color: orangered; }
+
+.lg {
+  width: 56px;
+  height: 56px;
+  margin-right: 10px;
+  background: url(https://s02.mifile.cn/assets/static/image/logo-mi2.png) no-repeat;
+  background-size: 56px;
+  position: absolute;
+  top: 40px;
+  left: 0; }
+
+.foot {
+  margin-top: 0;
+  line-height: 18px;
+  padding-left: 67px;
+  font-size: 12px; }
+  .foot a {
+    color: #757575; }
+    .foot a:hover {
+      color: #ff6700; }
+
+.oo a {
+  color: #b0b0b0; }
+
+.info-link {
+  height: 28px;
+  margin: 4px 0 15px;
+  padding-left: 67px; }
+  .info-link a {
+    display: inline-block; }
+    .info-link a img {
+      width: auto;
+      height: 28px; }
+
+a .active {
+  display: none; }
+
+.four {
+  margin: 30px auto 0;
+  width: 100%;
+  height: 19px;
+  background: url(https://cdn.cnbj1.fds.api.mi-img.com/staticsfile/global/slogan2020.png) no-repeat center; }
+
+.fi {
+  width: 84px;
+  min-height: 400px;
+  position: fixed;
+  top: 100px;
+  right: 0;
+  z-index: 1000; }
+  .fi a {
+    display: block;
+    width: 84px;
+    height: 92px;
+    margin-top: -1px;
+    background: #fff;
+    border: 1px solid #f5f5f5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: #acacb0;
+    transition: all .3s; }
+    .fi a:hover {
+      color: #ff6700; }
+    .fi a span {
+      font-size: 16px;
+      font-weight: 400; }
+    .fi a i {
+      padding-top: 18px;
+      font-size: 30px;
+      margin: 0 auto 8px; }
