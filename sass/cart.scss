@@ -1,0 +1,112 @@
+.content-mi{
+    width: 1226px;
+    margin: 0 auto;
+    line-height: 70px;
+    background: #fff;
+}
+.row{
+    border-bottom: 1px solid #ccc;
+}
+.row1{
+    height: 100px;
+    img{
+        width: 80px;
+        height: 80px;
+    }
+    .zhong{
+        line-height: 100px;
+    }
+    .box2{
+        width: 160px;
+        margin-top: 30px;
+        height: 40px;
+        border: 1px solid #bbb;
+        display: flex;
+        justify-content: space-between;
+        p{
+            line-height: 40px;
+        }
+        li{
+            line-height: 40px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            transition: all .4s;
+            &:hover{
+                background: #bbb;
+            }
+        }
+    }
+}
+.cart-mi{
+    background: #f5f5f5;
+    padding-bottom: 20px;
+    width: 100%;
+}
+.yuan{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    transition: all .3s;
+    i{
+
+        width: 30px;
+        height: 30px;
+        border-radius:30px ;
+        cursor: pointer;
+        &:hover{
+            font-size: 20px;
+            background: #ff6700;
+            color: #fff;
+        }
+    }
+}
+.mi-carto{
+    width: 1226px;
+    margin: 10px auto;
+    background: #fff;
+    overflow: hidden;
+    .mi-cartol{
+        margin-top: 20px;
+        float: left;
+        a{
+            font-size: 14px;
+            &:hover{
+                color: #ff6700;
+            }
+        }
+        span{
+            margin: 0 5px;
+           color: #aaa;
+        }
+        #pan{
+            color: #ff6700;
+        }
+    }
+    .mi-cartor{
+        float: right;
+        i{
+            color: #ff6700;
+            span{
+                font-size: 30px;
+            }
+        }
+        .ic{
+            margin-left: 20px;
+            display: inline-block;
+            width: 160px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            background: #ff6700;
+            transition: all .4s;
+            &:hover{
+                background: #f25807;
+            }
+        }
+    }
+}
+#fat{
+    min-height: 100px;
+}
