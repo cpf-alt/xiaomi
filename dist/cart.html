@@ -51,12 +51,12 @@
         </div>
         <div class="mi-carto">
             <div class="mi-cartol">
-                <a href=""><span>继续购物</span></a>
+                <a href="index.html"><span>继续购物</span></a>
                 <span>|</span>
-                <i>共<span id="pan">3</span>件商品，已经选择<span id="pan">1</span>件</i>
+                <i>共<span id="pan" class="gong">3</span>件商品，已经选择<span id="pan" class="xuanze">0</span>件</i>
             </div>
             <div class="mi-cartor">
-                <i>合计：<span class="iq">109元</span></i>
+                <i>合计：<span class="iq">0元</span></i>
                 <i class="ic">去结算</i>
             </div>
         </div>
@@ -268,7 +268,7 @@
             $(this).css({ "color": "#ff6700", "borderColor": "#ff6700" }).siblings().css({ "color": "#333", "borderColor": "#f5f5f5" })
         })
         $.get("http://jx.xuzhixiang.top/ap/api/cart-list.php", {
-            id: 9087
+            id: getCookie("miid")
         }).then(res => {
             let str = "";
             let arr = [];
@@ -277,7 +277,7 @@
                 str += `
         <div class="row row1"}> 
         <div class="col-md-1 zhong"> 
-        <i><input type="checkbox"> </i> 
+        <i><input type="checkbox" id="checkone" class="ce"> </i> 
         </div> 
         <div class="col-md-1 zhong"> 
         <img src="${res.data[i].pimg}" 
@@ -289,23 +289,25 @@
         <div class="col-md-2 "> 
         <div class="box2 "> 
         <li id="jian">-</li> 
-        <p>${res.data[i].pnum}</p> 
+        <input class="pum" id="${res.data[i].pid}" value="${res.data[i].pnum} ">
         <li id="jia">+</li> 
         </div> 
         </div> 
         <div class="col-md-1 zhong"></div> 
-        <div class="col-md-1 zhong">${res.data[i].pprice}</div> 
+        <div class="col-md-1 zhong pprice">${res.data[i].pprice * res.data[i].pnum}</div> 
         <div class="col-md-1 zhong"></div> 
         <div class="col-md-1 yuan"> 
         <i class="del" id="${res.data[i].pid}">X</i> 
         </div> 
         </div> `;
             }
-            console.log(arr)
             fat.innerHTML = str;
             let fat9 = document.querySelector("#fat");
             let fatt = document.querySelector(".fat1");
             let fata = document.querySelector(".mi-carto");
+            let gong = document.querySelector(".gong")
+            let xuanze = document.querySelector(".xuanze")
+            // console.log(gong, xuanze)
             if (fat9.children.length == 0) {
                 fatt.style.display = "none";
                 fata.style.display = "none";
@@ -325,14 +327,166 @@
             // })
             // }
             // })
-            console.log($(".del"))
+            let checkall = document.querySelector("#checkAll")
+            let checkone = document.querySelectorAll("#checkone")
+            let pnum = document.querySelectorAll(".pum")
+            gong.innerHTML = checkone.length;
+            // console.log(checkall, checkone)
+
+            for (let i = 0; i < checkone.length; i++) {
+                //复选 点击单个复选框时，判断选中的数量和实际复选框的数量是否相同，如果相同，让全选复选框选中
+
+                checkone[i].onclick = () => {
+                    let count = 0; //计数用的，默认为0，每次点击时，重新开始计算
+                    for (let j = 0; j < checkone.length; j++) {
+                        if (checkone[j].checked) { //只要有选中的计数器+1
+                            count++;
+                        }
+                    };
+                    if (count === checkone.length) { //判断选中的数量和实际数量是否相同
+                        checkall.checked = true;
+                    } else {
+                        checkall.checked = false;
+                    }
+                    getTotalPrice(); //这个操作也需要更新总价
+                }
+            }
+            let pprice = document.querySelectorAll(".pprice")
+            checkall.onclick = () => {
+                // console.log($("input:checked"))
+                // console.log("ok")
+                //所有单个复选框的状态和checkAll的状态一致
+                for (let i = 0; i < checkone.length; i++) {
+                    checkone[i].checked = checkall.checked;
+                }
+                // this.getTotalPrice(); //点击全选复选框需要展示总价
+                getTotalPrice();
+            }
+            let iq = document.querySelector(".iq");
+            // let iq = document.querySelector(".iq");
+
+            function getSum() {
+                let a = 0;
+                for (let i = 0; i < checkone.length; i++) {
+                    //console.log($("#checkone").eq(i).parent().parent().siblings(".pprice"))
+                    if ($(".ce").eq(i).prop("checked") == true) {
+                        //console.log("1")
+                        a += parseInt($(".ce").eq(i).parent().parent().siblings(".pprice").html());
+                        // a=parseInt(a);
+                    }
+                    // console.log(($("#checkone").eq(1)))
+                }
+                return a;
+            }
+            // console.log(($(".ce")))
+            function getTotalPrice() {
+                let total = 0;
+                let n = 0;
+                for (let i = 0; i < checkone.length; i++) { //找到所有选中的商品，将单种商品总价累加即可得到所有商品总价
+                    if (checkone[i].checked) {
+                        total += Number(pprice[i].innerText); //字符串转数值
+                        n++;
+                    }
+                };
+                xuanze.innerText = n;
+                iq.innerText = total + "元"; //将和放到DOM结构中
+                // console.log(total)
+            }
+            // let num = pnum.value
+            // console.log(num)
+            $(".pum").on("input", function () {
+                // console.log($(this).val())
+                $.get("http://jx.xuzhixiang.top/ap/api/cart-update-num.php", {
+                    pid: $(this).attr("id"),
+                    uid: getCookie("miid"),
+                    pnum: $(this).val()
+                }).then(res => {
+                    // console.log("1")
+                    // location.href = "http://127.0.0.1:8080/cart.html"
+                    $.get("http://jx.xuzhixiang.top/ap/api/cart-list.php", {
+                        id: getCookie("miid")
+                    }).then(res => {
+                        for (let i = 0; i < pprice.length; i++) {
+                            pprice[i].innerText = parseInt(res.data[i].pprice) * parseInt(res.data[i].pnum)
+                        }
+                    })
+                })
+            })
+            console.log(pnum)
+            let jia = document.querySelectorAll("#jia")
+            for (let i = 0; i < pprice.length; i++) {
+                jia[i].onclick = function () {
+                    pnum[i].value++;
+                    $.get("http://jx.xuzhixiang.top/ap/api/cart-update-num.php", {
+                        pid: $(".pum").eq(i).attr("id"),
+                        uid: getCookie("miid"),
+                        pnum: pnum[i].value
+                    }).then(res => {
+                        // console.log("1")
+                        // location.href = "http://127.0.0.1:8080/cart.html"
+                        $.get("http://jx.xuzhixiang.top/ap/api/cart-list.php", {
+                            id: getCookie("miid")
+                        }).then(res => {
+                            for (let i = 0; i < pprice.length; i++) {
+                                pprice[i].innerText = parseInt(res.data[i].pprice) * parseInt(res.data[i].pnum)
+                                getTotalPrice();
+                            }
+                        })
+                    })
+                }
+            }
+            let jian = document.querySelectorAll("#jian")
+            for (let i = 0; i < pprice.length; i++) {
+                jian[i].onclick = function () {
+                    if (pnum[i].value <= 1) {
+                        console.log("1")
+                        pnum[i].value = 2;
+                    }
+                    pnum[i].value--;
+                    $.get("http://jx.xuzhixiang.top/ap/api/cart-update-num.php", {
+                        pid: $(".pum").eq(i).attr("id"),
+                        uid: getCookie("miid"),
+                        pnum: pnum[i].value
+                    }).then(res => {
+                        // console.log("1")
+                        // location.href = "http://127.0.0.1:8080/cart.html"
+                        $.get("http://jx.xuzhixiang.top/ap/api/cart-list.php", {
+                            id: getCookie("miid")
+                        }).then(res => {
+                            for (let i = 0; i < pprice.length; i++) {
+                                pprice[i].innerText = parseInt(res.data[i].pprice) * parseInt(res.data[i].pnum)
+                                getTotalPrice();
+                            }
+                        })
+                    })
+                }
+            }
+
+            // getTotalPrice();
             $(".del").click(function () {
-                console.log($(this))
+                console.log($(".iq"))
+                // console.log($(this))
                 $.get("http://jx.xuzhixiang.top/ap/api/cart-delete.php", {
                     pid: $(this).attr("id"),
-                    uid: 9087
+                    uid: getCookie("miid")
                 }).then(res => {
-                    location.href = "http://127.0.0.1:8080/cart.html"
+                    $.get("http://jx.xuzhixiang.top/ap/api/cart-list.php", {
+                        id: getCookie("miid")
+                    }).then(res => {
+                        $(this).parent().parent().remove()
+                        $(".iq").html(getSum())
+
+                        if (fat9.children.length == 0) {
+                            fatt.style.display = "none";
+                            fata.style.display = "none";
+                        } else {
+                            fatt.style.display = "block";
+                            fata.style.display = "block";
+                        }
+                        xuanze.innerText = $("input:checked").length - 1
+                        gong.innerHTML = $(".ce").length;
+                        // console.log($("input:checked").length)
+                    })
                 })
             })
         })

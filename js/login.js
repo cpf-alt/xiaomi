@@ -34,6 +34,7 @@ btn.onclick = function () {
         }, res => {
             alert(res.msg)
             setCookie("username", oInput[0].value, 7);
+            setCookie("miid", res.data.id, 7);
             location.href = "http://127.0.0.1:8080/"
         })
     } else {

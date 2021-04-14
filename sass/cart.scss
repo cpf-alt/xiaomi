@@ -23,8 +23,11 @@
         border: 1px solid #bbb;
         display: flex;
         justify-content: space-between;
-        p{
+        input{
+            width: 74px;
+            border: none;
             line-height: 40px;
+            text-align: center;
         }
         li{
             line-height: 40px;
