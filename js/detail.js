@@ -18,11 +18,16 @@ $.get("http://jx.xuzhixiang.top/ap/api/detail.php", {
     m6.src = res.data.pimg;
 })
 $(".onc").click(function () {
-    $(".onk").show();
-    $.get("http://jx.xuzhixiang.top/ap/api/add-product.php", {
-        uid: getCookie("miid"),
-        pid: id,
-        pnum: 1
-    }).then(res => {
-    })
+    if (getCookie("username")) {
+        $(".onk").show();
+        $.get("http://jx.xuzhixiang.top/ap/api/add-product.php", {
+            uid: getCookie("miid"),
+            pid: id,
+            pnum: 1
+        }).then(res => {
+        })
+    } else {
+        alert("请先注册登录")
+
+    }
 })
